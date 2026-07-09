@@ -1,0 +1,5 @@
+i++; Post-increment
+++i; Pre-increment
+
+i--; Pre-decrement
+--i; Post-decrement

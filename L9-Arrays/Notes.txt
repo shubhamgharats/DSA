@@ -1,0 +1,13 @@
+Arrays- Used to store multiple values of (same type of items)
+
+Stores value in contiguous Memory locations.
+
+Can access specific value by using index.
+
+int arr[10]; ---->SYNTAX
+
+int arr[10] ==> Will initialize all loaction with value zero
+(Can be done only for 0)
+
+Array Function--> (int arr[],int size)
+

@@ -17,10 +17,12 @@ int *q = p; // Copying a pointer
 cout<< p << " - "<< q<< endl; 
 cout<< *p << " - "<< *q<< endl; 
     
+
+//Important Concept
+
 int i =3;
 int *t = &i;
 
-//cout << (*t)++<< endl;
 *t = *t+1;
 cout << *t << endl;
 cout << "before t "<<t<<endl;

@@ -2,7 +2,7 @@
 using namespace std;
 int main(){
 int i =5;
-int *ptr = &i;
+int *ptr = &i; // Pointer "ptr" stores address of variable i
 
 cout<< i<< endl;
 cout<< *ptr<< endl;
@@ -10,7 +10,7 @@ cout<< &i<< endl;
 cout<< ptr<< endl;
 
 double d= 4.3;
-double *p2 = &d;
+double *p2 = &d; // "p2" is a pointer to double 
 
 cout<<d<< endl;
 cout<< *p2<< endl;

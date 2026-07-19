@@ -1,251 +1,79 @@
-# C++ Pointers Quiz
+# C++ Pointers Interview Quiz
 
-> **Instructions**
+> Difficulty: ⭐⭐☆☆☆ (Beginner–Intermediate)
 >
-> - Try solving without running the code.
-> - Write the output first, then verify.
-> - Answers are at the end.
+> Try to answer without running the code.
 
 ---
 
-# Q1. Address Operator
+# Q1. Output Prediction
 
 ```cpp
-int a = 10;
-int *p = &a;
+int x = 10;
+int *p = &x;
+
+cout << *p << endl;
+cout << p << endl;
 ```
 
-What do the following print?
-
-1. `p`
-2. `&a`
-3. `*p`
-4. `&p`
+What is printed?
 
 ---
 
-# Q2. Pointer Arithmetic
+# Q2. Output Prediction
 
 ```cpp
-int arr[] = {10,20,30,40};
+int arr[] = {5, 10, 15, 20};
+
+cout << *(arr + 2);
 ```
 
-Find the output.
+A. 10
 
-```cpp
-cout << *arr << endl;
-cout << *(arr+1) << endl;
-cout << *(arr+3) << endl;
-```
+B. 15
+
+C. 20
+
+D. Address of arr[2]
 
 ---
 
-# Q3. Array Formula
-
-Fill in the blank.
-
-```cpp
-arr[i] = ____________
-```
-
-Also write the alternative (rarely used) syntax.
-
----
-
-# Q4. sizeof()
-
-Assume:
-
-- `int = 4 bytes`
-- Pointer = `8 bytes`
-
-```cpp
-int arr[10];
-int *p = arr;
-```
-
-Find:
-
-1. `sizeof(arr)`
-2. `sizeof(p)`
-3. `sizeof(*p)`
-4. `sizeof(&arr)`
-
----
-
-# Q5. Character Array
-
-```cpp
-char ch[] = "Hello";
-
-cout << ch;
-```
-
-What gets printed?
-
----
-
-# Q6. Integer Array
+# Q3. What is the output?
 
 ```cpp
 int arr[] = {1,2,3};
 
-cout << arr;
+cout << arr[1] << endl;
+cout << *(arr+1);
 ```
 
-What gets printed?
+A. Different outputs
+
+B. Same outputs
+
+C. Compilation Error
+
+D. Garbage Value
 
 ---
 
-# Q7. Function Calls
+# Q4. Pointer Arithmetic
 
 ```cpp
-void update(int *p){
-    p = p + 1;
-}
+int arr[] = {10,20,30,40};
 
-int x = 5;
-int *ptr = &x;
+int *p = arr;
 
-update(ptr);
+p++;
+
+cout << *p;
 ```
 
-Does `ptr` change after the function call?
+Output?
 
 ---
 
-# Q8. Value Update
-
-```cpp
-void update(int *p){
-    *p = *p + 1;
-}
-
-int x = 5;
-
-update(&x);
-```
-
-Final value of `x`?
-
----
-
-# Q9. Arrays in Functions
-
-```cpp
-int sum(int arr[]){
-    cout << sizeof(arr);
-}
-```
-
-Why does this print `8` on a 64-bit system instead of the array size?
-
----
-
-# Q10. Passing Part of an Array
-
-```cpp
-int arr[] = {1,2,3,4,5};
-
-getSum(arr+2,3);
-```
-
-Which elements are passed?
-
----
-
-# Q11. Pointer vs Array
-
-Which one can be reassigned?
-
-A)
-
-```cpp
-arr = arr + 1;
-```
-
-B)
-
-```cpp
-p = p + 1;
-```
-
-Explain why.
-
----
-
-# Q12. Double Pointer
-
-```cpp
-int x = 5;
-int *p = &x;
-int **q = &p;
-```
-
-Find:
-
-1. `*p`
-2. `*q`
-3. `**q`
-
----
-
-# Q13. Triple Pointer
-
-```cpp
-int x = 5;
-int *p = &x;
-int **q = &p;
-int ***z = &q;
-```
-
-Find:
-
-1. `*z`
-2. `**z`
-3. `***z`
-
----
-
-# Q14. update1()
-
-```cpp
-void update(int **ptr){
-    ptr = ptr + 1;
-}
-```
-
-What changes after calling this function?
-
----
-
-# Q15. update2()
-
-```cpp
-void update(int **ptr){
-    *ptr = *ptr + 1;
-}
-```
-
-What changes?
-
----
-
-# Q16. update3()
-
-```cpp
-void update(int **ptr){
-    **ptr = **ptr + 1;
-}
-```
-
-What changes?
-
----
-
-# Q17. Symbol Table
-
-Why is this invalid?
+# Q5. Find the Error
 
 ```cpp
 int arr[5];
@@ -253,227 +81,273 @@ int arr[5];
 arr = arr + 1;
 ```
 
----
-
-# Q18. Conceptual
-
-Why must a pointer have a data type?
-
-Give **two reasons**.
+Why is this invalid?
 
 ---
 
-# Q19. Fill in the Blanks
-
-```
-Variable
-   ↑
-_________
-   ↑
-_________
-   ↑
-_________
-```
-
----
-
-# Q20. One-Line Definitions
-
-Define:
-
-1. Pointer
-2. Double Pointer
-3. Triple Pointer
-4. Dereferencing
-5. Pointer Arithmetic
-
----
-
-# ---------------- ANSWERS ----------------
-
-## A1
-
-1. Address of `a`
-2. Address of `a`
-3. `10`
-4. Address of pointer `p`
-
----
-
-## A2
-
-```
-10
-20
-40
-```
-
----
-
-## A3
+# Q6. What does this print?
 
 ```cpp
-*(arr+i)
+char ch[] = "Code";
+
+cout << ch;
 ```
 
-Alternative:
+A. Address
+
+B. C
+
+C. Code
+
+D. Garbage
+
+---
+
+# Q7. What does this print?
 
 ```cpp
-i[arr]
+int arr[] = {1,2,3};
+
+cout << arr;
 ```
+
+A. 1
+
+B. Address
+
+C. 123
+
+D. Garbage
 
 ---
 
-## A4
-
-```
-40
-8
-4
-8
-```
-
----
-
-## A5
-
-```
-Hello
-```
-
----
-
-## A6
-
-Address of first element.
-
----
-
-## A7
-
-No.
-
-Only the local copy of the pointer changes.
-
----
-
-## A8
-
-```
-6
-```
-
----
-
-## A9
-
-Because arrays decay into pointers when passed to functions.
-
----
-
-## A10
-
-```
-3
-4
-5
-```
-
----
-
-## A11
-
-Only
+# Q8. Predict the Output
 
 ```cpp
-p = p + 1;
-```
+void update(int *p){
+    *p = *p + 5;
+}
 
-is valid.
+int x = 10;
 
-Array names are constant addresses stored in the symbol table.
+update(&x);
 
----
-
-## A12
-
-```
-*p  -> 5
-*q  -> address of x
-**q -> 5
+cout << x;
 ```
 
 ---
 
-## A13
+# Q9. Predict the Output
 
-```
-*z   -> address of p
-**z  -> address of x
-***z -> 5
-```
+```cpp
+void update(int *p){
+    p++;
+}
 
----
+int x = 10;
+int *ptr = &x;
 
-## A14
+update(ptr);
 
-Nothing.
-
-Only the local copy of the double pointer changes.
-
----
-
-## A15
-
-Pointer `p` changes.
-
-The value remains unchanged.
-
----
-
-## A16
-
-The value changes.
-
-Example:
-
-```
-5 → 6
+cout << *ptr;
 ```
 
----
-
-## A17
-
-Because an array name is a fixed address stored in the symbol table and cannot be reassigned.
+Output?
 
 ---
 
-## A18
+# Q10. Arrays in Functions
 
-1. To know the type of data stored.
-2. To know how many bytes to read/write from memory.
-
----
-
-## A19
-
-```
-Variable
-   ↑
-Pointer
-   ↑
-Double Pointer
-   ↑
-Triple Pointer
+```cpp
+void fun(int arr[]){
+    cout << sizeof(arr);
+}
 ```
 
+What does `sizeof(arr)` return on a 64-bit machine?
+
+A. 40
+
+B. 8
+
+C. 4
+
+D. Depends on array size
+
 ---
 
-## A20
+# Q11. Double Pointer
 
-- **Pointer:** Stores the address of a variable.
-- **Double Pointer:** Stores the address of another pointer.
-- **Triple Pointer:** Stores the address of a double pointer.
-- **Dereferencing:** Accessing the value stored at an address using `*`.
-- **Pointer Arithmetic:** Performing arithmetic operations (`+`, `-`) on pointers to move between memory locations.
+```cpp
+int x = 7;
+
+int *p = &x;
+
+int **q = &p;
+
+cout << **q;
+```
+
+Output?
+
+---
+
+# Q12. Triple Pointer
+
+```cpp
+int x = 5;
+
+int *p = &x;
+
+int **q = &p;
+
+int ***z = &q;
+
+cout << ***z;
+```
+
+Output?
+
+---
+
+# Q13. Predict the Output
+
+```cpp
+int x = 5;
+
+int *p = &x;
+
+int **q = &p;
+
+**q = 20;
+
+cout << x;
+```
+
+---
+
+# Q14. What Changes?
+
+```cpp
+void update(int **ptr){
+    *ptr = *ptr + 1;
+}
+```
+
+Which one changes?
+
+A. Value
+
+B. Pointer
+
+C. Double Pointer
+
+D. Nothing
+
+---
+
+# Q15. Predict the Output
+
+```cpp
+int arr[] = {2,4,6,8};
+
+cout << arr[2] << endl;
+
+cout << *(2 + arr);
+```
+
+---
+
+# Q16. Complete the Statement
+
+```
+arr[i] = ____________
+```
+
+---
+
+# Q17. Which is TRUE?
+
+A.
+
+```cpp
+sizeof(array) == sizeof(pointer)
+```
+
+B.
+
+Array names can be reassigned.
+
+C.
+
+Pointers can be reassigned.
+
+D.
+
+`arr` stores the last element.
+
+---
+
+# Q18. Which Statement is FALSE?
+
+A. Pointer stores an address.
+
+B. Double pointer stores address of another pointer.
+
+C. Triple pointer stores value directly.
+
+D. Arrays decay into pointers when passed to functions.
+
+---
+
+# Q19. Spot the Bug
+
+```cpp
+int *p;
+
+cout << *p;
+```
+
+Why is this dangerous?
+
+---
+
+# Q20. Interview Coding Question
+
+Without using `arr[i]`, print every element of the array.
+
+```cpp
+int arr[] = {1,2,3,4,5};
+```
+
+Use only pointer arithmetic.
+
+---
+
+# Answers
+
+| Q | Answer |
+|---|--------|
+| 1 | `10` then address of `x` |
+| 2 | **B** |
+| 3 | **B** |
+| 4 | `20` |
+| 5 | Array names cannot be reassigned |
+| 6 | **C** |
+| 7 | **B** |
+| 8 | `15` |
+| 9 | `10` |
+| 10 | **B (8 bytes)** |
+| 11 | `7` |
+| 12 | `5` |
+| 13 | `20` |
+| 14 | **B** |
+| 15 | `6` and `6` |
+| 16 | `*(arr+i)` |
+| 17 | **C** |
+| 18 | **C** |
+| 19 | Wild pointer (uninitialized pointer) |
+| 20 | ```cpp
+for(int *p = arr; p < arr + 5; p++)
+    cout << *p << " ";
+``` |

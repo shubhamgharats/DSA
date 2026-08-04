@@ -19,6 +19,7 @@ void update2(int *p){
 
 int getSum(int arr[], int n){
     
+    // Might face error in terminal
     cout <<endl <<"Size: "<< sizeof(arr)<< endl;
     // Prints 8, means the argument "int arr[]" is not a complete array, 
     // but is a pointer which is passed

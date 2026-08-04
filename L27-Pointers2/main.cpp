@@ -23,6 +23,7 @@ int main(){
     cout<<i<<endl;
     cout<<*p<<endl;
     cout<<**q<<endl;
+    cout<<***z<<endl;
     
     cout<<"Print i's address: "<<endl;
     cout<<&i<<endl;
@@ -38,6 +39,9 @@ int main(){
     cout<<"Print pointer Q's address: "<<endl;
     cout<<&q<<endl;
     cout<<z<<endl;
+
+    cout<<"Print pointer Z's address: "<<endl;
+    cout<<&z<<endl;
 
 
 return 0;

@@ -1,6 +1,3 @@
-Yes. You want **exactly the same style as your original notes** — headings, definitions, explanation, code, recursive flow, and key points. No extra restructuring.
-
-````md
 # Example 3: Climbing Stairs
 
 You are climbing a staircase. It takes `n` steps to reach the top.
